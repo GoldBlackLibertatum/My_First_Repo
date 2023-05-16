@@ -1,0 +1,222 @@
+# Honors Introduction to C - Programming Assignment #2
+
+https://www.cs.ucf.edu/~dmarino/ucf/transparency/cop3223/
+https://www.cs.ucf.edu/~dmarino/ucf/transparency/cop3223/asgn-python/
+
+
+Due date: Please consult WebCourses for your due date/time
+Objectives
+1. To give students practice solving problems that utilize the math library.
+2. To give students practice solving problems using the if statement.
+
+## Problem A: How close will the hurricane get? (hurricane1.py)
+In planning for a hurricane, it’s important to know how close the eye of the hurricane will
+get to your current location. To make this calculation much easier, for this program, you’ll
+make this calculation for only a specific set of cases.
+With this past hurricane, Dorian, at some point, the eye of the storm was directly east of
+Orlando, heading in a direction in between north and west, as shown in this diagram:
+Given the distance between Orlando and the eye of the hurricane when the eye is directly
+east of Orlando, and the angle A shown in the diagram (for this program assume A is greater
+than 0 degrees and less than 90 degrees), write a program to calculate the shortest distance
+the eye will ever be from Orlando, assuming that the hurricane continues heading in the
+direction shown.
+
+**Input Specification**
+There will be two input values:
+1. The number of miles east the Eye is to Orlando. (This is guaranteed to be a real number
+in between 10 and 1000, inclusive.
+2. The angle A specified in the diagram above, in degrees. This is guaranteed to be a integer
+greater than 0 and less than 90.
+
+
+**Output Specification**
+Produce a single line of output with the following format:
+The closest distance the eye will get to Orlando is X miles.
+where X is a real number representing the minimum distance in miles the hurricane will
+get to Orlando.
+Output Sample
+Below is one sample output of running the program. Note that this sample is NOT a
+comprehensive test. You should test your program with different data than is shown here
+based on the specifications given above. In the sample run below, for clarity and ease of
+reading, the user input is given in italics while the program output is in bold. (Note: When
+you actually run your program no bold or italics should appear at all. These are simply used
+in this description for clarity’s sake.)
+
+**Sample Run**
+How far (in miles) was the eye from Orlando when it was directly east
+of Orlando?
+*155.5*
+What angle (in degrees), north of east is the hurricane moving?
+*45*
+The closest distance the eye will get to Orlando is 109.95510447450813
+miles.
+Note: The prints shown above (first and last) should fit on one line if the screen is wide
+enough.
+
+## Problem B: Hurricane Time Calculation (hurricane2.py)
+In addition to calculating the closest distance a hurricane will get to Orlando, it may be
+useful to know the time at which the hurricane will be at its closest distance from Orlando.
+(If the hurricane isn’t particularly close, it’s okay to frolic outside.)
+In order to make this determination, in addition to the input data from Problem A, your
+program will need to take in the speed, in miles per hour, the eye (and hence the storm) is
+moving.
+Using this information, your program should calculate the number of hours AFTER the
+hurricane is directly east of Orlando that it is closest to Orlando.
+
+**Input Specification**
+The first two items adhere to the specification from Program A. The third item, the speed
+of the hurricane in miles per hour, will be a positive real number in between 0.1 and 25.0.
+3
+
+**Output Specification**
+Produce two lines of output.
+The first line will be identical to the first line in Program A.
+
+The second line of output will have the following format:
+This will occur X hours after the eye was east of Orlando.
+where X is a real number representing the number of hours after the eye was east or Orlando
+that it gets closest to Orlando.
+
+**Output Sample**
+Below is one sample output of running the program. Note that this sample is NOT a
+comprehensive test. You should test your program with different data than is shown here
+based on the specifications given above. In the sample run below, for clarity and ease of
+reading, the user input is given in italics while the program output is in bold. (Note: When
+you actually run your program no bold or italics should appear at all. These are simply used
+in this description for clarity’s sake.)
+
+**Sample Run**
+How far (in miles) was the eye from Orlando when it was directly east
+of Orlando?
+*155.5*
+What angle (in degrees), north of east is the hurricane moving?
+*45*
+How fast is the hurricane moving in miles per hour?
+*5.5*
+*The closest distance the eye will get to Orlando is 109.95510447450813
+miles.*
+*This will occur 19.9918371771833 hours after the eye was east of
+Orlando.*
+
+## Problem C: Hurricane Wind Speed (hurricane3.py)
+Of course, knowing when the hurricane is important, in terms of preparation, it’s also
+important to know the maximum wind speed in your area, due to the hurricane. For this
+problem, you’ll add to your solution to part B to print out the range of wind speeds when
+the hurricane is closest to Orlando.
+For the purposes of this problem, your program will only output the following ranges of
+wind speeds:
+Tropical Storm: [39, 74) mph
+Category 1 Hurricane: [74, 96) mph
+Category 2 Hurricane: [96 – 111) mph
+Category 3 Hurricane: [111 – 130) mph
+Category 4 Hurricane: [130 –157) mph
+Category 5 Hurricane: >= 157 mph
+
+
+In order to make this determination, you will get the following input from the user:
+1. The category of the hurricane (guaranteed to be 1, 2, 3, 4 or 5)
+Based on this information, you’ll ask the user several questions. In particular, for a
+category h hurricane, you will ask the user h+1 questions. 
+
+The first of these questions is:
+“How far (in miles) from the eye do tropical storm winds extend?”
+The rest of the h questions are of the form:
+“How far (in miles) from the eye do category i winds extend?”, where i is replaced with
+the appropriate number, 1, 2, 3, 4 or 5.
+The last question should be about category h winds.
+Based on all of this information, you’ll report the type of winds that will be received
+when the storm is closest to Orlando.
+
+**Input Specification**
+All of the prior items adhere to the previous specifications.
+The category of the hurricane is guaranteed to be entered as 1, 2, 3, 4 or 5.
+Each of the answers to the distance questions is guaranteed to be an integer number of
+miles less than 1000, and greater than zero. In addition, it’s guaranteed that the answer to
+each subsequent question will be less than each previous question. (Namely, tropical storm
+winds will extend strictly further than category 1 winds, which will extend strictly further
+than category 2 winds, and so forth.)
+
+**Output Specification**
+Produce three lines of output.
+The first two lines will be identical to the output of part B.
+The third line of output will be one of the following lines:
+No significant winds will be experienced in Orlando.
+The strongest winds experienced in Orlando will be tropical storm winds.
+The strongest winds experienced in Orlando will be category 1 winds.
+The strongest winds experienced in Orlando will be category 2 winds.
+The strongest winds experienced in Orlando will be category 3 winds.
+The strongest winds experienced in Orlando will be category 4 winds.
+The strongest winds experienced in Orlando will be category 5 winds.
+5
+
+The first line should be outputted if the shortest distance from the eye to Orlando is greater
+than how far tropical storm winds extend. The second line should be outputted if the
+minimum distance from the eye to Orlando is less than or equal to where tropical storm
+force winds are, but greater than where category 1 winds are. Use a similar rule for
+outputting the rest of the lines.
+
+**Implementation Restriction**
+To be fair to all students new to programming, it is required that NO loops be used on this
+program and that it’s completed ONLY WITH if statements.
+
+**Output Sample**
+Below is one sample output of running the program. Note that this sample is NOT a
+comprehensive test. You should test your program with different data than is shown here
+based on the specifications given above. In the sample run below, for clarity and ease of
+reading, the user input is given in italics while the program output is in bold. (Note: When
+you actually run your program no bold or italics should appear at all. These are simply used
+in this description for clarity’s sake.)
+
+**Sample Run**
+How far (in miles) was the eye from Orlando when it was directly east
+of Orlando?
+*155.5*
+What angle (in degrees), north of east is the hurricane moving?
+*45*
+How fast is the hurricane moving in miles per hour?
+*5.5*
+*The closest distance the eye will get to Orlando is 109.95510447450813
+miles.*
+What category is the hurricane?
+*5*
+How far (in miles) from the eye do tropical storm winds extend?
+*200*
+How far (in miles) from the eye do category 1 winds extend?
+*90*
+How far (in miles) from the eye do category 2 winds extend?
+*70*
+How far (in miles) from the eye do category 3 winds extend?
+*55*
+How far (in miles) from the eye do category 4 winds extend?
+*45*
+How far (in miles) from the eye do category 5 winds extend?
+*30*
+*The closest distance the eye will get to Orlando is 109.95510447450813
+miles.*
+*This will occur 19.9918371771833 hours after the eye was east of
+Orlando.*
+*The strongest winds experienced in Orlando will be tropical storm winds.*
+
+Note: A very simple way to make other test cases is to take this case and just change
+the category of the hurricane and make sure that your program asks the appropriate
+questions in those cases.
+6
+
+**Restrictions**
+Please IDLE 3.7 to develop your programs. Write each in a separate file with the names
+specified previously, hurricane1.py, hurricane2.py, and hurricane3.py.
+Each of your three programs should include a header comment with the following
+information: your name, course number, section number, assignment title, and date. Also,
+make sure you include comments throughout your code describing the major steps in
+solving the problem.
+
+Grading Details
+Your programs will be graded upon the following criteria:
+1) Your correctness
+2) Your programming style and use of white space. Even if you have a plan and your
+program works perfectly, if your programming style is poor or your use of white space is
+poor, you could get 10% or 15% deducted from your grade.
+3) Compatibility to IDLE.
+Note: This document may contain minor errors. If any are discovered by students or
+myself, I'll only make the corrections verbally in class. Please pay careful attention to
+these corrections/clarifications.

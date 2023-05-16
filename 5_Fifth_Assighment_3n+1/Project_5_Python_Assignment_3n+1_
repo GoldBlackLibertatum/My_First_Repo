@@ -1,0 +1,111 @@
+**Honors Introduction to C - Programming Assignment #3**
+
+Home: https://www.cs.ucf.edu/~dmarino/ucf/transparency/cop3223/
+Location: https://www.cs.ucf.edu/~dmarino/ucf/transparency/cop3223/asgn-python/
+
+Due date: Please consult WebCourses for your due date/time
+Objectives
+1. To learn how to apply a while loop to solve a problem.
+2. To learn how to use a for loop in conjunction with other language elements to solve a problem.
+
+# Problem A: 3n+1 Problem (sequence.py)
+
+A classic unsolved problem is the 3n+1 problem.We can create a sequence given a starting positive
+integer using the following rules to generate the next number in the sequence:
+1. If the current number, n, is even, then the next number in the sequence will be n/2.
+2. If the current number, n, is odd, then the next number in the sequence will be 3n+1.
+If the number generated is 1, the sequence stops. (In this case, if we were to continue the rules, the
+three values 4, 2, 1 would repeat over and over again.)
+
+For example, if the starting number is 6, the sequence generated would be:
+6, 3, 10, 5, 16, 8, 4, 2 and 1.
+It is unknown if this sequence will terminate at 1 for each input number. Luckily, we know that it
+terminates for the first thousand positive integers.
+Write a program that prompts the user to enter a single positive integer n and prints out the
+corresponding 3n+1 sequence that gets constructed from that starting value.
+
+**Input Specification**
+The value of n is guaranteed to be in between 1 and 1000, inclusive.
+
+**Output Specification**
+Write the sequence generated on a single line, placing a comma after each term except the last
+term.
+
+**Sample Program Run #1**
+What is your starting value of n?
+6
+*6,3,10,5,16,8,4,2,1*
+
+**Sample Program Run #2**
+What is your starting value of n?
+13
+*13,40,20,10,5,16,8,4,2,1*
+
+## Problem B: Fizz Buzz Edited (fizzbuzz.py)
+A very common interview question for budding programmers is the Fizz Buzz problem. The goal
+is to output numbers from 1 to n, except that if a number is divisible by 5, you output Fizz, if a
+number is divisible by 7, you output Buzz, and if a number is divisible by both, you output Fizz
+Buzz. In this question, instead of divisibility by 5 and 7, these two numbers will be input by the
+user.
+You are to write a program that asks for both a low and high bound for counting, inclusive, a
+number to check for divisibility to output “Fizz” and a number to check for divisibility by “Buzz.”
+Using this information, print output counting from low to high, one value per line, except if a value
+is divisible by the corresponding Fizz input, print out “Fizz”, if a value is divisible by the
+corresponding “Buzz” input, print out “Buzz”, and if a value is divisible by both, print out “Fizz
+Buzz”.
+Input Specification
+1. The low bound, L, will be in between 1 and 100, inclusive. (1 ≤ L ≤ 100)
+2. The high bound, H, will be greater than or equal to the low bound, but not more than 100 more
+than the low bound. (L ≤ H ≤ L + 100)
+3. The Fizz divisibility value, A, will be in between 2 and 30, inclusive. (2 ≤ A ≤ 30).
+4. The Buzz divisibility value, B, will be in between 2 and 30, inclusive, and not equal to A. (2 ≤
+B ≤ 30, B ≠ A)
+
+**Output Specification**
+Output the corresponding count with one value per line. (Note that “Fizz Buzz” should appear on
+a single line if the corresponding number is divisible by both of the intended values.)
+
+**Sample Program Run #1**
+At what number should the count start?
+*10*
+At what number should the count end?
+*20*
+What is the divisibility number for Fizz?
+*5*
+What is the divisibility number for Buzz?
+*3*
+Fizz
+11
+Buzz
+13
+14
+Fizz Buzz
+16
+17
+Buzz
+19
+Fizz
+
+# Problem C: Fun with the Turtle (spiral.py)
+In class we used the python turtle to make a couple spiral designs. Write a program that makes
+your own different spiral like design. In fact, you can really just do whatever design you want, as
+long as loops are involved somehow. Feel free to go above and beyond and do something way
+cooler than a basic spiral.
+Deliverables
+
+Three source files:
+1) sequence.py, for your solution to problem A
+2) fizzbuzz.py for your solution to problem B
+3) spiral.py for your solution to problem B
+All files are to be submitted over WebCourses.
+
+Restrictions
+Although you may use other compilers and coding environments, your program must run in IDLE
+for Python 3.7.
+
+Grading Details
+Your programs will be graded upon the following criteria:
+1) Your correctness
+2) Your programming style and use of white space. Even if you have a plan and your program
+works perfectly, if your programming style is poor or your use of white space is poor, you could
+get 10% or 15% deducted from your grade.
