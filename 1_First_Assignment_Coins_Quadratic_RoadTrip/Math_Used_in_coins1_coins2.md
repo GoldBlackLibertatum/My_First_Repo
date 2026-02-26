@@ -1,6 +1,6 @@
 # Math Necessary for Practice and Project¶
 
-**Key: N = nickels, D = Dimes**
+**Key: N = Nickels, D = Dimes**
 Given Variables
 1. Total Cost of Coins or .85  
 2. Total Coins
